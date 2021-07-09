@@ -1,0 +1,476 @@
+/*Custom Style */
+
+
+/* General settings*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: #364659;
+}
+
+/* -----------Navigation---------- */
+
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    bottom: 20px;
+    width: 60px;
+    height: 350px;
+    background:#161D26;
+    box-sizing: initial;
+    border-radius: 10px;
+    border-left: 5px solid #161D26;
+    transition:  width 0.5s;
+    overflow-x: hidden;
+}
+
+nav.active {
+    width: 300px;
+}
+
+nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 40px;
+
+}
+
+nav ul li {
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+li.active {
+    background-color: #364659;
+}
+
+li.active a {
+    color: #F2F2F2;
+}
+a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+ion-icon {
+    font-size: 1.5em;
+}
+
+.title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+.toggle {
+    position: fixed;
+    top:20px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle.active {
+    background-color: transparent;
+}
+
+.toggle ion-icon {
+    position: absolute;
+    color: white;
+    font-size: 34px;
+    display: none;
+}
+
+ion-icon.open, .toggle.active ion-icon.close {
+    display: block;
+}
+
+.toggle.active ion-icon.open, .toggle ion-icon.close {
+    display: none;
+}
+
+/* -----------home----------- */
+
+section#Home div.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 850px;
+    padding: 50px;
+    background-color: #364659;
+}
+
+.item-a{
+
+    background-color: #364659;
+    background-image: url(../img/two-professional-boxer-boxing-on-black-smoky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.item-b {
+    background-color: #364659;
+    color: white;
+    text-align: center;
+}
+
+.item-b a {
+    font-size: 18px;
+    color: white;
+    z-index: 1;
+}
+
+.item-b p{
+    margin-top: 150px;
+    font-size: 25px;
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    background-color:#161D26;
+    border-color: #161D26;
+    color: white;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    box-shadow: -4px 3px 3px #161D26;
+}
+
+button:hover {
+    background-color: #6883A6;
+    color:#161D26;
+    
+}
+
+.item-c{
+    background-color:transparent;
+    grid-column: 1/3;
+    height: 210px;
+    margin-top: -210px;
+    color: white;
+    text-align: center;
+}
+
+.item-c p {
+    font-size: 130px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* -----------about----------- */
+
+#About .grid-container{
+    display: grid;
+    grid-template-columns: 30% 20% 30% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "box1 box1 box2 box2"
+    ;
+    background-color: #364659;
+    padding: 50px;
+    margin-top: -30px;
+}
+
+.item-1 {
+    grid-area: header;
+    background-color: #161D26;
+    height: 100px;
+}
+
+.item-1 h1 {
+    font-size: 60px;
+    text-align: center;
+    color:white;
+}
+.item-2 {
+    grid-area: box1;
+    background-color: #161D26;
+    height: 600px;
+    text-align: center;
+    color: white;
+    border:1px solid #161D26;
+}
+
+.item-2 a {
+        font-size: 18px;
+        color: white;
+        z-index: 1;
+}
+.item-2 p.text{
+    margin: 50px 20px;
+    text-align: left;
+    
+}
+
+.item-3{
+    grid-area: box2;
+    background-color: #161D26;
+    height: 600px;
+    background-image: url(../img/african-sporty-man-boxing-mixed-people-training.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+p button.moreinfo {
+    border-color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* -----------style----------- */
+
+#Style div.grid-container {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 400px;
+    gap: 30px;
+    padding: 50px;
+}
+
+.item-d {
+    background-color: #161D26;
+    border: 1px solid white;
+    background-image: url(../img/Boxing.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-out;
+}
+
+.item-d a {
+    font-size: 18px;
+    color: white;
+    z-index: 1;
+}
+
+.item-d:hover{
+    transform: scale(1.1);
+}
+
+.item-e { 
+    background-color: #161D26;
+    border: 1px solid white;
+    background-image: url(../img/cropped-image-of-boxer-standing-in-gym.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-out;
+}
+
+.item-e a {
+    font-size: 18px;
+    color: white;
+    z-index: 1;
+}
+
+.item-e:hover{
+    transform: scale(1.1);
+}
+
+.item-f {
+    background-color:#161D26;
+    border: 1px solid white;
+    background-image: url(../img/karate-player-in-prayer-pose.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-out;
+}
+
+.item-f a {
+    font-size: 18px;
+    color: white;
+    z-index: 1;
+}
+
+.item-f:hover{
+    transform: scale(1.1);
+}
+
+.teste1 h1 {
+    color: white;
+    font-size: 30px;
+    text-align:center;
+    margin-top: 65%;
+    cursor: pointer;
+
+}
+
+.teste2 h1 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 65%;
+    cursor: pointer;
+}
+
+.teste3 h1 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 65%;
+    cursor: pointer;
+}
+
+/* -----------service----------- */
+
+
+#Services div.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    background-color: #AAB1BF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#Services div h1 {
+    color: #161D26;
+    font-size: 60px;
+}
+
+#Services div p {
+    color: #161D26;
+}
+
+#Services div h3 {
+    color: #161D26;
+    font-size: 22px;
+}
+
+/* -----------contact----------- */
+
+section#Contact div.grid-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(4);
+    grid-template-rows: 150px repeat(6);
+    background-color: #364659;
+    padding: 50px;
+    background-image: url(../img/close-up-hand-with-bandage-of-muscular-man-training-kickboxing-on-black-and-blue-smoke.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 15px;
+}
+
+.item-h {
+    background-color: #161D26;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    grid-column: 1/3;
+    grid-row: 1/5;
+        
+}
+
+.item-h h1 {
+    font-size: 60px;
+}
+
+.item-i{
+    background-color: #161D26;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    grid-column: 4/5;
+    grid-row: 4/4;
+    transition: all 0.3s ease-out;
+}
+
+.item-i:hover {
+    transform: scale(1.1);
+}
+
+.item-i h1 {
+    font-size: 40px;
+}
+
+input#name {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+input#email {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+textarea#coments {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 5/7;
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.fab {
+    color: white;
+    font-weight: 300px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+/* -----------footer----------- */
+
+footer{
+    background-color: #161D26;
+    text-align: center;
+    color: white;
+}
+
+
