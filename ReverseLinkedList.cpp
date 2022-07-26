@@ -26,8 +26,8 @@ int main(){
         prevNode = currNode;
         currNode = nxt;
     }
-    // Using the interative solution you've got a : O(n) Time Complexity and O(1) Space Complexity 
-    // The alghoritmn above represents the interative approach, lets try the recursive approach now right
+    // Using the iterative solution you've got a : O(n) Time Complexity and O(1) Space Complexity 
+    // The alghoritmn above represents the iterative approach, lets try the recursive approach now right
 
 
     void recursive(ListNode* head){
