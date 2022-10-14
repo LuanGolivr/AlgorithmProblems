@@ -1,2 +1,2 @@
 # Algs
-Here you will find some algorithm ive got learned  or ive been trainning and some Leetcode problems as well
+Here you will find some algorithm I've got learnt  or I've been trainning and some Leetcode problems as well.
