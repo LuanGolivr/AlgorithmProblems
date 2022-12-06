@@ -4,8 +4,8 @@
 
 /*
 
-    Time Complexity: O(N + M) because we're going to itarate through the each string only once
-    Space Complecity: O(N) because we're going to store the letters of one the strings to compare to the other string
+    Time Complexity: O(N) because we're going to itarate through the lenght of one of strings
+    Space Complecity: O(1) because since we're using an array to store the number of letter on the strings and we've got 26 letters in our alphabet so it is O(26) but 26 become a constant so it is O(1)
 
 */
 
@@ -17,26 +17,15 @@ public:
             return false;
         }
 
-        std::unordered_map<char, int> cachingS;
-        
+        int counts[26] = {0};
+
         for(int i = 0; i < s.size(); i++){
-            if(cachingS.find(s[i]) != cachingS.end()){
-                cachingS[s[i]] += 1;
-            }else {
-                cachingS.insert({s[i], 1});
-            }
+            counts[s[i] - 'a']++;
+            counts[t[i] - 'a']--;
         }
 
-        for(int j = 0; j < t.size(); j++){
-            if(cachingS.find(t[j]) != cachingS.end()){
-                cachingS[t[j]] -= 1;
-
-                if(cachingS[t[j]] <= -1){
-                    return false;
-                }
-            }else {
-                return false;
-            }
+        for(int j = 0; j < 26; j++){
+            if(counts[j]) return false;
         }
 
         return true;
