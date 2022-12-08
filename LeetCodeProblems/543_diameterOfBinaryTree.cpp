@@ -1,6 +1,11 @@
 #include <cstddef>
 #include <algorithm>
 
+/*
+    Time complexity: O(N)
+    Space complexity: O(N)
+*/
+
 struct TreeNode {
     int val;
     TreeNode *left;
